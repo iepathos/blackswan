@@ -1,1 +1,22 @@
 /* Empty. Add your own CSS if you like */
+body, html {
+    background-color: #eee;
+}
+
+/*.even {
+    background-color: #ffffff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#694489));
+    background-image: -webkit-linear-gradient(top, #ffffff, #694489);
+    background-image:    -moz-linear-gradient(top, #ffffff, #694489);
+    background-image:      -o-linear-gradient(top, #ffffff, #694489);
+    background-image:         linear-gradient(to bottom, #ffffff, #694489);
+}*/
+
+/*.odd {
+    background-color: #eeeeee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#999999));
+    background-image: -webkit-linear-gradient(top, #eeeeee, #999999);
+    background-image:    -moz-linear-gradient(top, #eeeeee, #999999);
+    background-image:      -o-linear-gradient(top, #eeeeee, #999999);
+    background-image:         linear-gradient(to bottom, #eeeeee, #999999);
+}*/
