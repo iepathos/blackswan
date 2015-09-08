@@ -1,14 +1,14 @@
 // Ionic Starter App
-var debug = true;
+var web = false;
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('blackswan', ['ionic', 'ngCordova'])
 
-.controller('ContactsCtrl', function($scope) {
+.controller('ContactsCtrl', function($scope, $cordovaContacts) {
   
   $scope.loadContacts = function() {
-    if (debug) {
+    if (web) {
       $scope.contacts = [
         { displayName: 'Glen Baker',
            alerts: true,
@@ -23,7 +23,11 @@ angular.module('blackswan', ['ionic', 'ngCordova'])
            silence: true
         }
       ];
-    } 
+    } else {
+      $cordovaContacts.find({multiple: true}).then(function(res) {
+        $scope.contacts  = res;
+      });
+    }
   }
 
   // parseSMS.js required
