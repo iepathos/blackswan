@@ -4,7 +4,7 @@
 var alert_emoji = "☎";
 var silence_emoji = "😶";
 
-/** Function count the occurrences of substring in a string;
+/* Function count the occurrences of substring in a string;
  * @param {String} string   Required. The string;
  * @param {String} subString    Required. The string to search for;
  * @param {Boolean} allowOverlapping    Optional. Default: false;
@@ -23,7 +23,10 @@ function occurrences(string, subString, allowOverlapping){
     return(n);
 }
 
-
+/* Function to return the dominant valid emoji in a given string.
+ * Returns null if string has no valid emojis.
+ * @param {String} sms   Required.  String to check for emojis.
+ */
 function parseEmoji(sms) {
     if (sms.indexOf(alert_emoji) > 0) {
         return alert_emoji;
@@ -43,10 +46,10 @@ function parseEmoji(sms) {
     }
 }
 
-
+/* Simple tests to verify parseEmoji identifies all of
+ * the expected emojis.
+ */
 function parseEmojiTest() {
-    // Simple tests to verify parseEmoji identifies all of
-    // the expected emojis
     var success = true;
     var errorCount = 0;
     var testNoEmoji = "Some plain text message."
